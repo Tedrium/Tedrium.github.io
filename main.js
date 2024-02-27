@@ -1,4 +1,4 @@
-import { arr1, arr2, arr3, embaralhar } from "./JS/file.js";
+import { arr1, arr2, arr3, embaralhar } from "file.js";
 
 //btn.removeEventListener("click", bgChange);
 const blockOne = document.getElementById("a");
