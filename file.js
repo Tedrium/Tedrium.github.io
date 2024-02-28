@@ -1,172 +1,88 @@
-* {
-  font-family: Arial;
-}
+function t() {}
 
-html,
-body {
-  height: 100vh;
-  text-align-last: center;
-}
+const num = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+];
+const num2 = [
+  22, 23, 35, 42, 57, 64, 73, 82, 97, 49, 88, 66, 44, 55, 75, 96, 87, 68, 99,
+  80, 61,
+];
+const names = [
+  "Apple",
+  "Banana",
+  "Pineapple",
+  "khaki",
+  "Mango",
+  "Watermelon",
+  "Kiwi",
+  "Strawberry",
+  "Blueberry",
+  "Lemon",
+  "Grape",
+  "Avocado",
+  "Tangerine",
+  "Orange",
+  "Olive",
+  "Gooseberry",
+  "Jackfruit",
+  "Blackberry",
+  "Fig",
+  "Apricot",
+  "Pear",
+];
 
-.panel {
-  display: flex;
-  width: 100%;
-  min-height: 400px;
-  justify-content: space-evenly;
- 
-  padding: 10px 0 10px 0;
-}
+  const a = num2
+  var arr1 = new Array();
+  arr1[0] = a[0];
+  arr1[1] = a[3];
+  arr1[2] = a[6];
+  arr1[3] = a[9];
+  arr1[4] = a[12];
+  arr1[5] = a[15];
+  arr1[6] = a[18];
 
-.card1,
-.card2,
-.card3 {
-  width: 300px;
-  height: 350px;
-  font-size: 35px;
-  border-radius: 10px;
-  text-align: center;
-  border-style: groove;
-}
+  var arr2 = new Array(7);
+  arr2[0] = a[1];
+  arr2[1] = a[4];
+  arr2[2] = a[7];
+  arr2[3] = a[10];
+  arr2[4] = a[13];
+  arr2[5] = a[16];
+  arr2[6] = a[19];
 
-.container {
-  padding-top: 50px;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  border-style: groove;
-  background-color: rgba(6, 6, 6, 0.796);
-}
+  var arr3 = new Array(7);
+  arr3[0] = a[2];
+  arr3[1] = a[5];
+  arr3[2] = a[8];
+  arr3[3] = a[11];
+  arr3[4] = a[14];
+  arr3[5] = a[17];
+  arr3[6] = a[20];
 
-.instruction {
-  width: 100%;
-  height: auto;
- 
-  text-align: center;
-  border-style: groove;
-}
-.btnChoice {
-  width: 70px;
-  height: 30px;
-  font-size: 15px;
-  visibility: hidden;
-  color: #000000;
-  background: #fff;
-  padding: 3px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-.btnChoice:hover {
-  color: #fff;
-  background: #002bff;
-}
-.init {
-  width: 150px;
-  height: 45px;
-  font-size: 25px;
-  color: #fefefe;
-  background: #04ccb2;
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: 600;
-  font-style: italic;
-  font-variant: normal;
-  border-style: solid;
-  border-color: #2b00ff;
-  font-family: sans-serif serif;
-}
-p {
-  font-size: 15px;
-}
-.glow-on-hover {
-  width: 220px;
-  height: 50px;
-  visibility: hidden;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  color: #000000;
-  background: #fff;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-}
+const embaralhar = function (a01, a02, a03, a, b, c) {
+  a01[0] = a[6];
+  a01[1] = a[3];
+  a01[2] = a[0];
+  a01[3] = b[4];
+  a01[4] = b[1];
+  a01[5] = c[5];
+  a01[6] = c[2];
+  // array 2
+  a02[0] = a[5];
+  a02[1] = a[2];
+  a02[2] = b[6];
+  a02[3] = b[3];
+  a02[4] = b[0];
+  a02[5] = c[4];
+  a02[6] = c[1];
+  //array 3
+  a03[0] = a[4];
+  a03[1] = a[1];
+  a03[2] = b[5];
+  a03[3] = b[2];
+  a03[4] = c[6];
+  a03[5] = c[3];
+  a03[6] = c[0];
+};
 
-.glow-on-hover:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #ffffff;
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: hsl(0, 0%, 100%);
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  height: 100px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
-
-}
-.foot-container {
-    width: 100%;
-}
-
+export { arr1, arr2, arr3, embaralhar };
