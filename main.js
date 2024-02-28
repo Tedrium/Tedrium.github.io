@@ -1,4 +1,4 @@
-import { arr1, arr2, arr3, embaralhar } from "/file.js";
+import { arr1, arr2, arr3, embaralhar } from "/JS/file.js";
 
 //btn.removeEventListener("click", bgChange);
 const blockOne = document.getElementById("a");
@@ -194,7 +194,7 @@ function segundaEtapa() {
     }
     ccb.style.background = "white";
   }
-  title.innerHTML = "Segunda Etapa";
+  title.innerHTML = "Second stage";
   play.removeEventListener("click", segundaEtapa);
   play.style.visibility = "hidden";
 }
@@ -251,8 +251,8 @@ function terceiraEtapa() {
     }
     name.style.background = "white";
     play.removeEventListener("click", terceiraEtapa);
-    title.innerHTML = "Terceira Etapa";
-    play.innerHTML = "Mostrar Seu Número";
+    title.innerHTML = "Third Stage";
+    play.innerHTML = "Show my number";
   }
 
   //#################### segundo teste #################
@@ -292,8 +292,8 @@ function terceiraEtapa() {
     }
     cca.style.background = "white";
     play.removeEventListener("click", terceiraEtapa);
-    title.innerHTML = "Terceira Etapa";
-    play.innerHTML = "Mostrar Seu Número";
+    title.innerHTML = "Third Stage";
+    play.innerHTML = "Show my number";
   }
 
   //#################### terceiro teste ####################
@@ -344,17 +344,17 @@ play.addEventListener("click", terceiraEtapa);
 
 function showNumber() {
   if (keyCardOne == true) {
-    alert("Seu Numero é o" + " " + arr1Part3[3]);
+    alert("Your number is" + " " + arr1Part3[3]);
     location.reload();
   }
 
   if (keyCardTwo == true) {
-    alert("Seu Numero é o " + " " + arr2Part3[3]);
+    alert("Your number is" + " " + arr2Part3[3]);
     location.reload();
   }
 
   if (keyCardThree == true) {
-    alert("Seu Numero é o" + " " + arr3Part3[3]);
+    alert("Your number is" + " " + arr3Part3[3]);
     location.reload();
   }
 }
