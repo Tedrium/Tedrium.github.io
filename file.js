@@ -1,66 +1,172 @@
+* {
+  font-family: Arial;
+}
 
-function trouxa() {
-  if (f == g - h || f * 32 == e){
-    
+html,
+body {
+  height: 100vh;
+  text-align-last: center;
+}
+
+.panel {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  justify-content: space-evenly;
+ 
+  padding: 10px 0 10px 0;
+}
+
+.card1,
+.card2,
+.card3 {
+  width: 300px;
+  height: 350px;
+  font-size: 35px;
+  border-radius: 10px;
+  text-align: center;
+  border-style: groove;
+}
+
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  border-style: groove;
+  background-color: rgba(6, 6, 6, 0.796);
+}
+
+.instruction {
+  width: 100%;
+  height: auto;
+ 
+  text-align: center;
+  border-style: groove;
+}
+.btnChoice {
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  visibility: hidden;
+  color: #000000;
+  background: #fff;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.btnChoice:hover {
+  color: #fff;
+  background: #002bff;
+}
+.init {
+  width: 150px;
+  height: 45px;
+  font-size: 25px;
+  color: #fefefe;
+  background: #04ccb2;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  font-style: italic;
+  font-variant: normal;
+  border-style: solid;
+  border-color: #2b00ff;
+  font-family: sans-serif serif;
+}
+p {
+  font-size: 15px;
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  visibility: hidden;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #000000;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #ffffff;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 0%, 100%);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
-const baralho = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-];
+footer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
 
-var arr1 = new Array();
-arr1[0] = baralho[0];
-arr1[1] = baralho[3];
-arr1[2] = baralho[6];
-arr1[3] = baralho[9];
-arr1[4] = baralho[12];
-arr1[5] = baralho[15];
-arr1[6] = baralho[18];
+}
+.foot-container {
+    width: 100%;
+}
 
-var arr2 = new Array(7);
-arr2[0] = baralho[1];
-arr2[1] = baralho[4];
-arr2[2] = baralho[7];
-arr2[3] = baralho[10];
-arr2[4] = baralho[13];
-arr2[5] = baralho[16];
-arr2[6] = baralho[19];
-
-var arr3 = new Array(7);
-arr3[0] = baralho[2];
-arr3[1] = baralho[5];
-arr3[2] = baralho[8];
-arr3[3] = baralho[11];
-arr3[4] = baralho[14];
-arr3[5] = baralho[17];
-arr3[6] = baralho[20];
-// criando novas arrays
-
-const embaralhar = function (a01, a02, a03, a, b, c) {
-  a01[0] = a[6];
-  a01[1] = a[3];
-  a01[2] = a[0];
-  a01[3] = b[4];
-  a01[4] = b[1];
-  a01[5] = c[5];
-  a01[6] = c[2];
-  // array 2
-  a02[0] = a[5];
-  a02[1] = a[2];
-  a02[2] = b[6];
-  a02[3] = b[3];
-  a02[4] = b[0];
-  a02[5] = c[4];
-  a02[6] = c[1];
-  //array 3
-  a03[0] = a[4];
-  a03[1] = a[1];
-  a03[2] = b[5];
-  a03[3] = b[2];
-  a03[4] = c[6];
-  a03[5] = c[3];
-  a03[6] = c[0];
-};
-
-export { arr1, arr2, arr3, embaralhar };
