@@ -1,0 +1,72 @@
+
+.ocultar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 45, 48, 0.862);
+    visibility: hidden;
+    border-radius: 10px;
+    z-index: -1;
+ 
+}
+
+.modal {
+    display: none;
+    width: 400px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #04fb4e;
+    border-radius: 15px;
+    
+}
+.modal-content {
+    position: relative;
+    width: 389px;
+    height: 189px;
+    left: 2px;
+    top: 3px;
+}
+.modal-body {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    left: 41px;
+    top: 33px;
+}
+img {
+   width: 35px;
+   height: 35px;
+}
+.coment {
+    position: absolute;
+    width: 289px;
+    height: 20px;
+    left: 3px;
+    top: 30px;
+}
+.result {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: 48px;
+    top: 40px;
+}
+.value {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    left: 70px;
+    top: 15px;
+    font-size: x-large;
+   
+}
